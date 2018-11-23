@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:paddingLeft="@dimen/activity_horizontal_margin"
+android:paddingRight="@dimen/activity_horizontal_margin"
+android:paddingTop="@dimen/activity_vertical_margin"
+android:paddingBottom="@dimen/activity_vertical_margin"
+tools:context=".MainActivity">
+
+<TextView
+    android:id="@+id/gameTitleView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Emo Mahjong"
+    android:textColor="#006400"
+    android:textSize="60dp"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="15dp" />
+    1
+
+    <Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Spielen"
+    android:id="@+id/playButton"
+        android:layout_below="@+id/gameTitleView"
+        android:layout_marginTop="45dp"
+        android:layout_alignLeft="@+id/rulesButton"
+        android:layout_alignStart="@+id/rulesButton"
+        android:layout_alignRight="@+id/rulesButton"
+        android:layout_alignEnd="@+id/rulesButton" />
+
+<Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Spielregeln"
+        android:id="@+id/rulesButton"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/playButton"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Beenden"
+        android:id="@+id/quitButton"
+        android:layout_below="@+id/rulesButton"
+        android:layout_alignLeft="@+id/rulesButton"
+        android:layout_alignStart="@+id/rulesButton"
+        android:layout_marginTop="25dp"
+        android:layout_alignRight="@+id/rulesButton"
+        android:layout_alignEnd="@+id/rulesButton" />
+
+</RelativeLayout>

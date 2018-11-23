@@ -1,0 +1,1086 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentEnd="false"
+    android:layout_alignParentLeft="false"
+    android:layout_alignParentRight="false"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".PlayActivity">
+
+
+    <TextView
+        android:id="@+id/pairDefView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Gültiges Paar: gleiche Emotionen"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:visibility="invisible" />
+
+
+    <Button
+        android:id="@+id/menuButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="Menü" />
+
+    <LinearLayout
+        android:id="@+id/lastpair"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/undoButton"
+        android:layout_alignLeft="@+id/undoButton"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentRight="false"
+        android:layout_centerHorizontal="false"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="false"
+        android:elevation="0dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/lastPairText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Letztes Paar:" />
+
+        <LinearLayout
+            android:id="@+id/lastPairImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <com.example.anna.mymahjong.app.Tile
+                android:id="@+id/lastTile1"
+                android:layout_width="75dip"
+                android:layout_height="75dip"
+                android:layout_weight="1"
+                android:background="@drawable/selector"
+                android:onClick="onClick"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:tag="aergerlich" />
+
+            <com.example.anna.mymahjong.app.Tile
+                android:id="@+id/lastTile2"
+                android:layout_width="75dip"
+                android:layout_height="75dip"
+                android:layout_weight="1"
+                android:background="@drawable/selector"
+                android:onClick="onClick"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:tag="aergerlich" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/lastEmotion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/undoButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="Rückgängig" />
+
+    <Button
+        android:id="@+id/hintButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentRight="true"
+        android:text="Hinweis" />
+
+    <RelativeLayout
+        android:id="@+id/playground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/undoButton"
+        android:layout_below="@+id/menuButton"
+        android:layout_toEndOf="@+id/undoButton"
+        android:layout_toLeftOf="@+id/menuButton"
+        android:layout_toRightOf="@+id/undoButton"
+        android:layout_toStartOf="@+id/menuButton"
+        android:gravity="center">
+
+        <LinearLayout
+            android:id="@+id/layer0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_centerHorizontal="false"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:weightSum="5">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="6">
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile000"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:onClick="onClick"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="aergerlich" />
+
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile010"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:onClick="onClick"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="angstvoll" />
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile020"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:onClick="onClick"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="angstvoll" />
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile030"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:onClick="onClick"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="angstvoll" />
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile040"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:onClick="onClick"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="angstvoll" />
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile050"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:onClick="onClick"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="angstvoll" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="6">
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile100"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:onClick="onClick"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="aergerlich" />
+
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile110"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:onClick="onClick"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="angstvoll" />
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile120"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:onClick="onClick"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="angstvoll" />
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile130"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:onClick="onClick"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="angstvoll" />
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile140"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:onClick="onClick"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="angstvoll" />
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile150"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:onClick="onClick"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="angstvoll" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="6">
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile200"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:onClick="onClick"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="aergerlich" />
+
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile210"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:onClick="onClick"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="angstvoll" />
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile220"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:onClick="onClick"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="angstvoll" />
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile230"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:onClick="onClick"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="angstvoll" />
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile240"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:onClick="onClick"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="angstvoll" />
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile250"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:onClick="onClick"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="angstvoll" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="6">
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile300"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:onClick="onClick"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="aergerlich" />
+
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile310"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:onClick="onClick"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="angstvoll" />
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile320"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:onClick="onClick"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="angstvoll" />
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile330"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:onClick="onClick"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="angstvoll" />
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile340"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:onClick="onClick"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="angstvoll" />
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile350"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:onClick="onClick"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="angstvoll" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="6">
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile400"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:onClick="onClick"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="aergerlich" />
+
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile410"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:onClick="onClick"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="angstvoll" />
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile420"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:onClick="onClick"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="angstvoll" />
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile430"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:onClick="onClick"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="angstvoll" />
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile440"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:onClick="onClick"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="angstvoll" />
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile450"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:onClick="onClick"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="angstvoll" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!--layer1-->
+        <LinearLayout
+            android:id="@+id/layer1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignWithParentIfMissing="false"
+            android:layout_centerHorizontal="false"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:weightSum="4">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.08"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile001"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="verliebt" />
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile011"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="verliebt" />
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile021"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="verliebt" />
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile031"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="verliebt" />
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile041"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="verliebt" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.08"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile101"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="verliebt" />
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile111"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="verliebt" />
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile121"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="verliebt" />
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile131"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="verliebt" />
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile141"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="verliebt" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.08"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile201"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="verliebt" />
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile211"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="verliebt" />
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile221"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="verliebt" />
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile231"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="verliebt" />
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile241"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="verliebt" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.08"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile301"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="verliebt" />
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile311"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="verliebt" />
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile321"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="verliebt" />
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile331"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="verliebt" />
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile341"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="verliebt" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--layer2-->
+        <LinearLayout
+            android:id="@+id/layer2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignWithParentIfMissing="false"
+            android:layout_centerHorizontal="false"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.08"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile002"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="verliebt" />
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile012"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="verliebt" />
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile022"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="verliebt" />
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile032"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="verliebt" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.08"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile102"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="verliebt" />
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile112"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="verliebt" />
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile122"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="verliebt" />
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile132"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="verliebt" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.08"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile202"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="verliebt" />
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile212"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="verliebt" />
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile222"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="verliebt" />
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile232"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="verliebt" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--layer3-->
+        <LinearLayout
+            android:id="@+id/layer3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignWithParentIfMissing="false"
+            android:layout_centerHorizontal="false"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.08"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile003"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="verliebt" />
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile013"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="verliebt" />
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile023"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="verliebt" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.08"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile103"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="verliebt" />
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile113"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="verliebt" />
+
+                <com.example.anna.mymahjong.app.Tile
+                    android:id="@+id/tile123"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tag="verliebt" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/gameInfo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="128dp"
+        android:layout_marginStart="128dp"
+        android:layout_toEndOf="@+id/undoButton"
+        android:layout_toRightOf="@+id/undoButton">
+
+        <TextView
+            android:id="@+id/matchesTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:text="Gefundene Paare:" />
+
+        <TextView
+            android:id="@+id/numberOfMatches"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="10dp" />
+
+        <TextView
+            android:id="@+id/levelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:text="Level:" />
+
+        <TextView
+            android:id="@+id/levelCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="10dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/skipLevelButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/hintButton"
+        android:layout_marginTop="83dp"
+        android:text="skip"
+        android:visibility="invisible" />
+
+
+</RelativeLayout>

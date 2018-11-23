@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="lvl0">
+        <item>3</item>
+    </integer-array>
+
+    <integer-array name="lvl1">
+        <item>3</item>
+        <item>2</item>
+    </integer-array>
+
+    <integer-array name="lvl2">
+        <item>3</item>
+        <item>1</item>
+    </integer-array>
+
+    <integer-array name="lvl3">
+        <item>2</item>
+        <item>1</item>
+    </integer-array>
+
+    <integer-array name="lvl4">
+        <item>3</item>
+        <item>2</item>
+        <item>1</item>
+    </integer-array>
+
+    <integer-array name="lvl5">
+        <item>3</item>
+        <item>2</item>
+        <item>0</item>
+    </integer-array>
+
+    <integer-array name="lvl6">
+        <item>3</item>
+        <item>1</item>
+        <item>0</item>
+    </integer-array>
+
+
+</resources>
