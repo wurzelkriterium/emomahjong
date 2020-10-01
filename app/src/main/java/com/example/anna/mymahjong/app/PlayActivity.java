@@ -26,16 +26,16 @@ public class PlayActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.play_activity);
 
-        lastPair1 = (Tile) findViewById(R.id.lastTile1);
+        lastPair1 =  findViewById(R.id.lastTile1);
         lastPair1.setEnabled(false);
-        lastPair2 = (Tile) findViewById(R.id.lastTile2);
+        lastPair2 =  findViewById(R.id.lastTile2);
         lastPair2.setEnabled(false);
-        lastEmotion = (TextView) findViewById(R.id.lastEmotion);
-        levelView = (TextView) findViewById(R.id.levelCount);
-        matchesView = (TextView) findViewById(R.id.numberOfMatches);
-        hintButton = (Button) findViewById(R.id.hintButton);
-        undoButton = (Button) findViewById(R.id.undoButton);
-        menuButton = (Button) findViewById(R.id.menuButton);
+        lastEmotion =  findViewById(R.id.lastEmotion);
+        levelView =  findViewById(R.id.levelCount);
+        matchesView =  findViewById(R.id.numberOfMatches);
+        hintButton =  findViewById(R.id.hintButton);
+        undoButton =  findViewById(R.id.undoButton);
+        menuButton =  findViewById(R.id.menuButton);
 
         initModel();
 
@@ -217,90 +217,90 @@ public class PlayActivity extends AppCompatActivity {
          Tile[][] layer2 = new Tile[3][4];
          Tile[][] layer3 = new Tile[2][3];
         //tiles 0
-        layer0[0][0] = (Tile) findViewById(R.id.tile000);
-        layer0[0][1] = (Tile) findViewById(R.id.tile010);
-        layer0[0][2] = (Tile) findViewById(R.id.tile020);
-        layer0[0][3] = (Tile) findViewById(R.id.tile030);
-        layer0[0][4] = (Tile) findViewById(R.id.tile040);
-        layer0[0][5] = (Tile) findViewById(R.id.tile050);
+        layer0[0][0] =  findViewById(R.id.tile000);
+        layer0[0][1] =  findViewById(R.id.tile010);
+        layer0[0][2] =  findViewById(R.id.tile020);
+        layer0[0][3] =  findViewById(R.id.tile030);
+        layer0[0][4] =  findViewById(R.id.tile040);
+        layer0[0][5] =  findViewById(R.id.tile050);
 
-        layer0[1][0] = (Tile) findViewById(R.id.tile100);
-        layer0[1][1] = (Tile) findViewById(R.id.tile110);
-        layer0[1][2] = (Tile) findViewById(R.id.tile120);
-        layer0[1][3] = (Tile) findViewById(R.id.tile130);
-        layer0[1][4] = (Tile) findViewById(R.id.tile140);
-        layer0[1][5] = (Tile) findViewById(R.id.tile150);
+        layer0[1][0] =  findViewById(R.id.tile100);
+        layer0[1][1] =  findViewById(R.id.tile110);
+        layer0[1][2] =  findViewById(R.id.tile120);
+        layer0[1][3] =  findViewById(R.id.tile130);
+        layer0[1][4] =  findViewById(R.id.tile140);
+        layer0[1][5] =  findViewById(R.id.tile150);
 
-        layer0[2][0] = (Tile) findViewById(R.id.tile200);
-        layer0[2][1] = (Tile) findViewById(R.id.tile210);
-        layer0[2][2] = (Tile) findViewById(R.id.tile220);
-        layer0[2][3] = (Tile) findViewById(R.id.tile230);
-        layer0[2][4] = (Tile) findViewById(R.id.tile240);
-        layer0[2][5] = (Tile) findViewById(R.id.tile250);
+        layer0[2][0] =  findViewById(R.id.tile200);
+        layer0[2][1] =  findViewById(R.id.tile210);
+        layer0[2][2] =  findViewById(R.id.tile220);
+        layer0[2][3] =  findViewById(R.id.tile230);
+        layer0[2][4] =  findViewById(R.id.tile240);
+        layer0[2][5] =  findViewById(R.id.tile250);
 
-        layer0[3][0] = (Tile) findViewById(R.id.tile300);
-        layer0[3][1] = (Tile) findViewById(R.id.tile310);
-        layer0[3][2] = (Tile) findViewById(R.id.tile320);
-        layer0[3][3] = (Tile) findViewById(R.id.tile330);
-        layer0[3][4] = (Tile) findViewById(R.id.tile340);
-        layer0[3][5] = (Tile) findViewById(R.id.tile350);
+        layer0[3][0] =  findViewById(R.id.tile300);
+        layer0[3][1] =  findViewById(R.id.tile310);
+        layer0[3][2] =  findViewById(R.id.tile320);
+        layer0[3][3] =  findViewById(R.id.tile330);
+        layer0[3][4] =  findViewById(R.id.tile340);
+        layer0[3][5] =  findViewById(R.id.tile350);
 
-        layer0[4][0] = (Tile) findViewById(R.id.tile400);
-        layer0[4][1] = (Tile) findViewById(R.id.tile410);
-        layer0[4][2] = (Tile) findViewById(R.id.tile420);
-        layer0[4][3] = (Tile) findViewById(R.id.tile430);
-        layer0[4][4] = (Tile) findViewById(R.id.tile440);
-        layer0[4][5] = (Tile) findViewById(R.id.tile450);
+        layer0[4][0] =  findViewById(R.id.tile400);
+        layer0[4][1] =  findViewById(R.id.tile410);
+        layer0[4][2] =  findViewById(R.id.tile420);
+        layer0[4][3] =  findViewById(R.id.tile430);
+        layer0[4][4] =  findViewById(R.id.tile440);
+        layer0[4][5] =  findViewById(R.id.tile450);
 
         //tiles 1
-        layer1[0][0] = (Tile) findViewById(R.id.tile001);
-        layer1[0][1] = (Tile) findViewById(R.id.tile011);
-        layer1[0][2] = (Tile) findViewById(R.id.tile021);
-        layer1[0][3] = (Tile) findViewById(R.id.tile031);
-        layer1[0][4] = (Tile) findViewById(R.id.tile041);
+        layer1[0][0] =  findViewById(R.id.tile001);
+        layer1[0][1] =  findViewById(R.id.tile011);
+        layer1[0][2] =  findViewById(R.id.tile021);
+        layer1[0][3] =  findViewById(R.id.tile031);
+        layer1[0][4] =  findViewById(R.id.tile041);
 
-        layer1[1][0] = (Tile) findViewById(R.id.tile101);
-        layer1[1][1] = (Tile) findViewById(R.id.tile111);
-        layer1[1][2] = (Tile) findViewById(R.id.tile121);
-        layer1[1][3] = (Tile) findViewById(R.id.tile131);
-        layer1[1][4] = (Tile) findViewById(R.id.tile141);
+        layer1[1][0] =  findViewById(R.id.tile101);
+        layer1[1][1] =  findViewById(R.id.tile111);
+        layer1[1][2] =  findViewById(R.id.tile121);
+        layer1[1][3] =  findViewById(R.id.tile131);
+        layer1[1][4] =  findViewById(R.id.tile141);
 
-        layer1[2][0] = (Tile) findViewById(R.id.tile201);
-        layer1[2][1] = (Tile) findViewById(R.id.tile211);
-        layer1[2][2] = (Tile) findViewById(R.id.tile221);
-        layer1[2][3] = (Tile) findViewById(R.id.tile231);
-        layer1[2][4] = (Tile) findViewById(R.id.tile241);
+        layer1[2][0] =  findViewById(R.id.tile201);
+        layer1[2][1] =  findViewById(R.id.tile211);
+        layer1[2][2] =  findViewById(R.id.tile221);
+        layer1[2][3] =  findViewById(R.id.tile231);
+        layer1[2][4] =  findViewById(R.id.tile241);
 
-        layer1[3][0] = (Tile) findViewById(R.id.tile301);
-        layer1[3][1] = (Tile) findViewById(R.id.tile311);
-        layer1[3][2] = (Tile) findViewById(R.id.tile321);
-        layer1[3][3] = (Tile) findViewById(R.id.tile331);
-        layer1[3][4] = (Tile) findViewById(R.id.tile341);
+        layer1[3][0] =  findViewById(R.id.tile301);
+        layer1[3][1] =  findViewById(R.id.tile311);
+        layer1[3][2] =  findViewById(R.id.tile321);
+        layer1[3][3] =  findViewById(R.id.tile331);
+        layer1[3][4] =  findViewById(R.id.tile341);
 
         //tiles 2
-        layer2[0][0] = (Tile) findViewById(R.id.tile002);
-        layer2[0][1] = (Tile) findViewById(R.id.tile012);
-        layer2[0][2] = (Tile) findViewById(R.id.tile022);
-        layer2[0][3] = (Tile) findViewById(R.id.tile032);
+        layer2[0][0] =  findViewById(R.id.tile002);
+        layer2[0][1] =  findViewById(R.id.tile012);
+        layer2[0][2] =  findViewById(R.id.tile022);
+        layer2[0][3] =  findViewById(R.id.tile032);
 
-        layer2[1][0] = (Tile) findViewById(R.id.tile102);
-        layer2[1][1] = (Tile) findViewById(R.id.tile112);
-        layer2[1][2] = (Tile) findViewById(R.id.tile122);
-        layer2[1][3] = (Tile) findViewById(R.id.tile132);
+        layer2[1][0] =  findViewById(R.id.tile102);
+        layer2[1][1] =  findViewById(R.id.tile112);
+        layer2[1][2] =  findViewById(R.id.tile122);
+        layer2[1][3] =  findViewById(R.id.tile132);
 
-        layer2[2][0] = (Tile) findViewById(R.id.tile202);
-        layer2[2][1] = (Tile) findViewById(R.id.tile212);
-        layer2[2][2] = (Tile) findViewById(R.id.tile222);
-        layer2[2][3] = (Tile) findViewById(R.id.tile232);
+        layer2[2][0] =  findViewById(R.id.tile202);
+        layer2[2][1] =  findViewById(R.id.tile212);
+        layer2[2][2] =  findViewById(R.id.tile222);
+        layer2[2][3] =  findViewById(R.id.tile232);
 
         //tiles 3
-        layer3[0][0] = (Tile) findViewById(R.id.tile003);
-        layer3[0][1] = (Tile) findViewById(R.id.tile013);
-        layer3[0][2] = (Tile) findViewById(R.id.tile023);
+        layer3[0][0] =  findViewById(R.id.tile003);
+        layer3[0][1] =  findViewById(R.id.tile013);
+        layer3[0][2] =  findViewById(R.id.tile023);
 
-        layer3[1][0] = (Tile) findViewById(R.id.tile103);
-        layer3[1][1] = (Tile) findViewById(R.id.tile113);
-        layer3[1][2] = (Tile) findViewById(R.id.tile123);
+        layer3[1][0] =  findViewById(R.id.tile103);
+        layer3[1][1] =  findViewById(R.id.tile113);
+        layer3[1][2] =  findViewById(R.id.tile123);
 
         model = new GameModel(getBaseContext(),layer0, layer1, layer2, layer3);
         model.loadGameContent();
